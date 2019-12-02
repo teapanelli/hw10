@@ -55,10 +55,7 @@ FastLED.delay(500 / FRAMES_PER_SECOND);
 for (int j = 0; j < NUM_LEDS; j++) {
 leds[j] = 0;
 }
-// void keyPressed() {
-// Serial.print("Pressed:");
-// Serial.println();
-// }
+
 FastLED.show();
 leftMotor->run(RELEASE);
 rightMotor->run(RELEASE);
@@ -77,10 +74,7 @@ FastLED.delay(500 / FRAMES_PER_SECOND);
 for (int j = 0; j < NUM_LEDS; j++) {
 leds[j] = 0;
 }
-// void keyPressed() {
-// Serial.print("Pressed:");
-// Serial.println();
-// }
+
 FastLED.show();
 leftMotor->run(RELEASE);
 rightMotor->run(RELEASE);
@@ -99,10 +93,7 @@ FastLED.delay(500 / FRAMES_PER_SECOND);
 for (int j = 0; j < NUM_LEDS; j++) {
 leds[j] = 0;
 }
-// void keyPressed() {
-// Serial.print("Pressed:");
-// Serial.println();
-// }
+
 FastLED.show();
 leftMotor->run(RELEASE);
 rightMotor->run(RELEASE);
@@ -110,8 +101,7 @@ Serial.println("Stopped");
 }
 void loop()
 {
-// Add entropy to random number generator; we use a lot of it.
-// random16_add_entropy( random());
+
 char c = Serial.read();
 if (c == 'b') {
 forward();
@@ -126,18 +116,4 @@ right();
 if (c == 'l') {
 left();
 }
-// // This takes one second to run
-// for (int i = 0; i < 60; i++) {
-// Fire2012(); // run simulation frame
-// FastLED.show(); // display this frame
-// FastLED.delay(500 / FRAMES_PER_SECOND);
-// }
-// for (int j = 0; j < NUM_LEDS; j++) {
-// leds[j] = 0;
-// }
-// // void keyPressed() {
-// // Serial.print("Pressed:");
-// // Serial.println();
-// // }
-// FastLED.show();
 }
